@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="avfoundation_avaudioplayer_power_visualizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xTd-aG-nH6" customClass="AudioPowerVisualizerView" customModule="avfoundation_avaudioplayer_power_visualizer" customModuleProvider="target">
+                                <rect key="frame" x="87" y="333" width="240" height="240"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xTd-aG-nH6" secondAttribute="height" id="G5Z-jh-Ztx"/>
+                                    <constraint firstAttribute="width" constant="240" id="rEc-lz-O32"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="120"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zwL-61-QvD">
+                                <rect key="frame" x="186" y="604" width="42" height="90"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Kw-pd-pvN">
+                                        <rect key="frame" x="0.0" y="0.0" width="42" height="30"/>
+                                        <state key="normal" title="Play"/>
+                                        <connections>
+                                            <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wkw-AT-Ilh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DjN-Bk-WbQ">
+                                        <rect key="frame" x="0.0" y="30" width="42" height="30"/>
+                                        <state key="normal" title="Pause"/>
+                                        <connections>
+                                            <action selector="pause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="di4-Ex-oMB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NYA-1i-mrm">
+                                        <rect key="frame" x="0.0" y="60" width="42" height="30"/>
+                                        <state key="normal" title="Stop"/>
+                                        <connections>
+                                            <action selector="stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nWF-uC-jJy"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="audio.png" translatesAutoresizingMaskIntoConstraints="NO" id="loe-Vf-pbN">
+                                <rect key="frame" x="157" y="403" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="ChI-9D-QoZ"/>
+                                    <constraint firstAttribute="width" secondItem="loe-Vf-pbN" secondAttribute="height" multiplier="1:1" id="aUK-I6-Qdj"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xTd-aG-nH6" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="1qE-7A-bhp"/>
+                            <constraint firstItem="zwL-61-QvD" firstAttribute="top" secondItem="xTd-aG-nH6" secondAttribute="bottom" constant="31" id="86K-Zi-ljB"/>
+                            <constraint firstItem="xTd-aG-nH6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="AUU-LQ-E7E"/>
+                            <constraint firstItem="loe-Vf-pbN" firstAttribute="centerX" secondItem="xTd-aG-nH6" secondAttribute="centerX" id="IVp-eT-4sl"/>
+                            <constraint firstItem="loe-Vf-pbN" firstAttribute="centerY" secondItem="xTd-aG-nH6" secondAttribute="centerY" id="Kbx-e3-0cd"/>
+                            <constraint firstItem="zwL-61-QvD" firstAttribute="centerX" secondItem="xTd-aG-nH6" secondAttribute="centerX" id="No3-6q-KcS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="powerView" destination="xTd-aG-nH6" id="AlR-Fa-QOD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="audio.png" width="200" height="200"/>
+    </resources>
+</document>
